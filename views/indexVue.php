@@ -1,6 +1,6 @@
 <?php
   include("template/header.php") //include the header
- ?>
+?>
 
 <br>
 	
@@ -95,15 +95,19 @@
 	</body>
 </html>
 
-<!-- https://openclassrooms.com/courses/creer-son-forum-de-toutes-pieces/inscription-et-connexion -->
 
-<!-- https://openclassrooms.com/courses/concevez-votre-site-web-avec-php-et-mysql/transmettre-des-donnees-avec-les-formulaires -->
+<!-- CRUD POO IN INGLISH -->
+<!-- https://www.youtube.com/watch?v=4HVZDo3MaVk -->
 
-<!-- BANK PROJECT -->
-<!-- https://www.youtube.com/watch?v=LdLaWCef_DI -->
+<!-- PHP OOP CRUD -->
+<!-- https://www.youtube.com/watch?v=GZMaAe0iUdc -->
 
-<!-- Projet bibliothèque -->
-<!-- https://www.youtube.com/watch?v=f0UQsK4Y83s -->
 
-<!-- projet Bank Avec JAVA -->
-<!-- https://www.youtube.com/watch?v=8fCiUU4nMIk -->
+<!-- PHP POO CRUD EN FRANCAIS
+https://www.youtube.com/watch?v=4E7ttRmtEM8 -->
+
+
+
+
+<!-- PHP POO CRUD IN ENGLISH -->
+<!-- http://blog.chapagain.com.np/php-crud-add-edit-delete-view-application-using-oop-object-oriented-programming/ -->
