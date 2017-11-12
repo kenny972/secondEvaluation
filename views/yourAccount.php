@@ -4,21 +4,11 @@
 
 
 		<!-- data recovery from the page registration -->
-	<p>Welcome to you
-	<?php echo $_POST['FirstName'] . ' ' . $_POST['LastName'];
-	
-		$_POST['password'] .' '. $_POST['password2'];
-			if ($_POST['password'] === $_POST['password2'])
-		{
-	        echo "Correct password, welcome !";
-	    }	
-	    	elseif ($_POST['password'] != $_POST['password2'])
-	    {
-	        echo "Incorrect password, please try again !";
-	    }      
-
-
-	?> 
+	<p> Welcome, Your account has been successfully created.</p>
+	<p>You are : 
+		<?php echo $_POST ['FirstName'] . ' ' . $_POST['LastName'];  
+		?> 
+	</p>
 
 
 

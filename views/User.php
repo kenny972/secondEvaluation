@@ -2,12 +2,19 @@
 
 class User //I declare here my class
 {
+			// I declare here my attributes	
+	protected $Id;
 	protected $FirstName;
-	protected $LastName; // I declare here my attributes
-  	protected $Amount;	// I declare here my attributes		
+	protected $LastName; 
+  	protected $Amount;	
 
+  			//The Setters
+	public function setId($Id)
+	{
+		$this->Id = $Id;
+	}
 
-	public function setFirstName($FirstName)//The Setters
+	public function setFirtName($FirstName)
 	{
 		$this->FirstName = $FirstName;
 	}
@@ -23,16 +30,35 @@ class User //I declare here my class
 	}
 
 
+			// The Getters
+	public function getId($Id)
+	{
+		$this->Id = $Id;
+	}
+
+	public function getFirtName($FirstName)
+	{
+		$this->FirstName = $FirstName;
+	}
+
+	public function getLastName($LastName)
+	{
+		$this->LastName = $LastName;
+	}
+
+	public function getAmount($Amount)
+	{
+		$this->Amount = $Amount;
+	}
+
+		// function contruct with the hydratation
+  	// public function __construct(array $data)
+  	// {
+  	// 	$this->hydrate($data);
+  	// }
+
+
 }
-
-$data = [
-"LastName"=>"Kenny",
-"FirstName"=>"GENLY",
-"Amount"=>0,
-
-];
-
-$Person = new user($data);
-var_dump($data);
-
 ?>
+
+

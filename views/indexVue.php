@@ -96,18 +96,30 @@
 </html>
 
 
-<!-- CRUD POO IN INGLISH -->
-<!-- https://www.youtube.com/watch?v=4HVZDo3MaVk -->
-
-<!-- PHP OOP CRUD -->
-<!-- https://www.youtube.com/watch?v=GZMaAe0iUdc -->
-
-
-<!-- PHP POO CRUD EN FRANCAIS
-https://www.youtube.com/watch?v=4E7ttRmtEM8 -->
 
 
 
 
-<!-- PHP POO CRUD IN ENGLISH -->
-<!-- http://blog.chapagain.com.np/php-crud-add-edit-delete-view-application-using-oop-object-oriented-programming/ -->
+
+
+
+
+
+
+
+<!-- TUTO PARFAIT ? -->
+<!-- https://fr.wikibooks.org/wiki/Programmation_PHP/Programmation_orient%C3%A9e_objet -->
+
+
+			<!-- BANK PROJECT GOOGLE SEARCH -->
+<!-- https://www.google.fr/search?ei=11kHWsapIMf7afzJgLgK&q=building+a+bank+project+with+php+oop+&oq=building+a+bank+project+with+php+oop+&gs_l=psy-ab.3..35i39k1.18078.18078.0.19168.1.1.0.0.0.0.216.216.2-1.1.0....0...1.1.64.psy-ab..0.1.216....0.O_VrLrdB0dU -->
+
+
+			<!-- BANK PROJECT ONE -->
+<!-- https://translate.google.fr/translate?hl=fr&sl=en&u=http://www.webreference.com/programming/php/OOP_03/index.html&prev=search -->
+
+			<!-- BANK PROJECT TWO -->
+<!-- https://translate.google.fr/translate?hl=fr&sl=en&u=http://www.webreference.com/programming/php/OOP_03/index.html&prev=search -->
+
+			<!-- BANK PROJECT THREE -->
+<!-- http://www.webreference.com/programming/php/OOP_04/index.html -->
