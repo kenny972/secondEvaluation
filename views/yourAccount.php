@@ -9,6 +9,10 @@
 		<?php echo $_POST ['FirstName'] . ' ' . $_POST['LastName'];  
 		?> 
 	</p>
+	<br><br>
+	<!-- <p>
+		Now, please  <a href="indexVue.php">  click here </a> to return to the home page and enter your email address, as well as your password in the related part.
+	</p> -->
 
 
 

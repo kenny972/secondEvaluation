@@ -1,6 +1,8 @@
+
 <?php
 
-class Account{
+class Account
+{
 
 protected $id;
 
@@ -8,7 +10,8 @@ protected $username;
 
 protected $credit;
 
-public function __construct(array $donnees){
+public function __construct(array $donnees)
+{
   $this->hydrate($donnees);
 }
 public function hydrate(array $donnees)
@@ -93,13 +96,15 @@ public function hydrate(array $donnees)
     {
         $this->credit = htmlspecialchars($credit);
 
+       
+
        return $this;
     }
 
    public function addCredit($amount){
 
         $this->credit +=  $amount;
-         $this->setCredit($this->credit);
+         $this->setCredit($this->credit);//défini son crédit
     }
 
    public function minousCredit($amount){
@@ -111,6 +116,6 @@ public function hydrate(array $donnees)
 }
 
 
-
 ?>
 
+<!-- // $donnees -->

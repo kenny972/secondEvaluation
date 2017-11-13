@@ -1,6 +1,6 @@
 <?php
 
-header('Location: controllers/home.php');  
+header('Location: views/indexVue.php');  
 
 
 

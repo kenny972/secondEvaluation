@@ -1,40 +1,37 @@
+
 <?php 
-	declare(strict_types=1);
-	require_once('../model/AccountManager.php');
-	require_once('../model/Account.php');
+	
+
+	require_once('../model/AccountManager.php');//attach my folders and files to read
+	require_once('../model/Account.php');//attach my folders and files to read
+
 
 			// 1) Loading classes and tools needed
-	$Manager = new AccountManager();
-		if (isset($_POST['username']) AND isset($_POST['credit'])){
-				// creat a new account
-			$account = new Account($_POST);
+	$Manager = new AccountManager();//creat a new object
 
-			$Manager->add($account);	
+		if (isset($_POST['username']) AND isset($_POST['credit'])){ //create a condition to retrieve seizures in the "homeView" in the modal
+
+				// creat a new object
+			$account = new Account($_POST);//recover the input with the post method
+
+			$Manager->add($account);//Add the variable $account
+			}
+			$vueaccount = $Manager->getAccountInBdd();//recover what is in the database
+
+
+					// Condition for delete a account
+			if (isset($_POST['deleteaccount']))//I get my data in my file with the post method
+			{
+  			$Manager->deleteAccount($_POST['deleteaccount']);
+  			header('Location:home.php');
 			}
 
 
 
-
-
-
-
-
-
-
-
-			// 2) Application logic (The conditions, The variables, transformations...)
-
-
-
-
-
-
-
-
-
-
-		// 3) View of my Application
-include "../views/homeView.php";
+		// 2) View of my Application
+			
+	include "../views/homeView.php";
+			
 ?>
 
 
@@ -42,3 +39,4 @@ include "../views/homeView.php";
 
 
 
+<!-- // $donnees -->

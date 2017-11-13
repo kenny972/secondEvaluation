@@ -23,10 +23,10 @@
 				<br> • transfer area from one account to another
 				<br> • But above all, give to the poor!
 		    </p>
-		    <a href="freeBank.php" class="btn btn-primary">Go to Free Bank</a>
+		    <a href="../controllers/home.php" class="btn btn-primary">Go to Free Bank</a>
 		  </div>
-		  <div class="card-footer text-muted">
-		    Offer valid for 2 years, take advantage of it to rob us.
+		  <div style="color: white;" class="card-footer text-muted">
+		   
 		  </div>
 		</div>	
 					<br><br>
