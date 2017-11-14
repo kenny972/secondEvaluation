@@ -1,5 +1,7 @@
+<?php
+    include("template/header.php"); //include the header
 
-
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,110 +21,178 @@
     <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://use.fontawesome.com/1d29cca193.js"></script>
   </head>
+
+  <!-- star of body -->
   <body>
+  <!-- star of header -->
     <header>
-      <h1>BANK</h1>
+        <h1 style="text-align: center;color: #E87D00;">Accounts</h1>
     </header>
+  <!-- end of header   -->
+                      <br>
+                      <br>
+  
+  <!-- star of nav modal-->
     <nav>
       <ul>
-        <li><!-- Button trigger modal -->
-        <a class="" data-toggle="modal" data-target="#exampleModal" href="#">ADD ACCOUNT</a>
-        <!-- Modal -->
+        <li>
+        <a class="" data-toggle="modal" data-target="#exampleModal" href="#">
+          ADD ACCOUNT
+        </a>
+
+                            <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">ADD ACCOUNT</h5>
+
+                <h5 class="modal-title" id="exampleModalLabel">   ADD ACCOUNT
+                </h5>
+
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                  <span aria-hidden="true">
+                  &times;
+                  </span>
                 </button>
+
               </div>
+
               <div class="modal-body">
                 <form class="" action="" method="post">
-                  <label>USER NAME</label><br>
+
+                  <label>
+                    USER NAME
+                  </label><br>
+
                   <input type="text" name="username" value=""><br>
-                  <label>CREDIT</label><br>
+                  <label>
+                    CREDIT
+                  </label><br>
+
                   <input type="text" name="credit" value=""><br>
                   <input class="mt-3" type="submit" name="" value="ADD">
+
                 </form>
               </div>
+
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Close
+                </button>
               </div>
             </div>
           </div>
         </div>
       </li>
       <li>
-        <a class="" data-toggle="modal" data-target="#exampleModal2" href="#">TRANSFER</a>
-        <!-- Modal -->
+
+        <a class="" data-toggle="modal" data-target="#exampleModal2" href="#">
+          TRANSFER
+        </a>
+
+                        <!-- Modal TRANSFER -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">TRANSFER</h5>
+
+                <h5 class="modal-title" id="exampleModalLabel">   TRANSFER
+                </h5>
+
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                  <span aria-hidden="true">
+                    &times;
+                  </span>
                 </button>
               </div>
+
               <div class="modal-body">
                 <form class="text-center" action="../controllers/transfer.php" method="post">
-                  <p>FROM</p>
+                  
+                              <!-- The source -->
+                  <p>FROM</p> 
                   <select class="mb-3" name="from">
-                    <?php foreach ($vueaccount as $donnees)
+                          <!-- use of PHP -->
+                    <?php foreach ($vueaccount as $donnees) //creat a $vueaccount for my file transfer.php and my file home.php
                     {
                     ?>
-                    <option value="<?php echo $donnees->getId(); ?>"><?php echo $donnees->getUsername(); ?></option>
+                    <option value="<?php echo $donnees->getId(); ?>">
+                      <?php echo $donnees->getUsername(); ?>
+                    </option>
                     <?php  } ?>
                   </select>
+                              <!-- end The source -->
+
+                              <!-- The receiver -->
                   <p>TO</p>
                   <select class="mb-3" name="to">
                     <?php foreach ($vueaccount as $donnees)
                     {
                     ?>
-                    <option value="<?php echo $donnees->getId(); ?>"><?php echo $donnees->getUsername(); ?></option>
+                    <option value="<?php echo $donnees->getId(); ?>">
+                      <?php echo $donnees->getUsername(); ?>  
+                    </option>
                     <?php  } ?>
                   </select>
+                              <!-- end of The receiver -->
+
                   <br>
-                  <input placeholder="credit" class="mb-3" type="text" name="additional" value=""><br>
+                  <input placeholder="credit" class="mb-3" type="text" name="additional" value="">
+                    <br>
                   <input type="submit" name="" value="TRANSFER">
                 </form>
+
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Close
+                </button>
               </div>
             </div>
           </div>
         </div>
       </li>
       <li>
-        <a class="" data-toggle="modal" data-target="#exampleModal3" href="#">WITHDRAWAL</a>
+        <a class="" data-toggle="modal" data-target="#exampleModal3" href="#">
+          WITHDRAWAL
+        </a>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">WITHDRAWAL</h5>
+
+                <h5 class="modal-title" id="exampleModalLabel">   WITHDRAWAL
+                </h5>
+
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+
               <div class="modal-body">
                 <form class="text-center" action="../controleur/withdrawal.php" method="post">
                   <select class="mb-3" name="from">
                     <?php foreach ($vueaccount as $donnees)
                     {
                     ?>
-                    <option value="<?php echo $donnees->getId(); ?>"><?php echo $donnees->getUsername(); ?></option>
+                    <option value="<?php echo $donnees->getId(); ?>">
+                      <?php echo $donnees->getUsername(); ?> 
+                    </option>
                     <?php  } ?>
                   </select>
-                  <br>
-                  <input placeholder="debit" class="mb-3" type="text" name="minous" value=""><br>
+
+                      <br>
+                  <input placeholder="debit" class="mb-3" type="text" name="minous" value="">
+                      <br>
                   <input type="submit" name="" value="withdrawal">
                 </form>
               </div>
+
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Close
+                </button>
               </div>
             </div>
           </div>
@@ -130,7 +200,9 @@
       </li>
     </ul>
   </nav>
-  <table class="table table-striped table-dark">
+  
+ <!--  <table class="table table-striped table-dark"> -->
+ <table style="background-color: #868789;" class="table table-inverse">
     <thead>
       <tr>
         <th scope="col">id</th>
@@ -144,22 +216,46 @@
       {
       ?>
       <tr>
-        <th scope="row"><?php echo $donnees->getId(); ?></th>
-        <td><?php echo $donnees->getUsername(); ?></td>
-        <td><?php echo $donnees->getCredit(); ?></td>
-        <td><form class="" action="" method="post">
-          <a class="" href="accountcontroleur.php?project=<?php echo $donnees->getId(); ?>"><button class="bg-faded " type="button" name="button"><i class="fa fa-eye" aria-hidden="true"></i>
-          </button></a>
+
+        <th scope="row">
+          <?php echo $donnees->getId(); ?>
+        </th>
+
+        <td>
+          <?php echo $donnees->getUsername(); ?>
+        </td>
+
+        <td>
+          <?php echo $donnees->getCredit(); ?>
+        </td>
+
+        <td>
+          <form class="" action="" method="post">
+          <a class="" href="accountcontroleur.php?project=<?php echo $donnees->getId(); ?>">
+            <button class="bg-faded " type="button" name="button"><i class="fa fa-eye" aria-hidden="true"></i>
+            </button>
+          </a>
           <form class="" action="" method="post">
             <input type="hidden" name="deleteaccount" value="<?php echo $donnees->getId(); ?>">
-            <button type="submit" name="button">delete</button>
+            <button type="submit" name="button">
+              delete
+            </button>
           </form>
         </form>
       </td>
+
     </tr>
     <?php } ?>
+
   </tbody>
+
 </table>
+
+
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>

@@ -3,29 +3,29 @@
 
 class Account
 {
+    protected $id;
+    protected $username;
+    protected $credit;
 
-protected $id;
 
-protected $username;
+    public function __construct(array $donnees)
+    {
+        $this->hydrate($donnees); 
+    }
 
-protected $credit;
+    public function hydrate(array $donnees)
+    {
+    foreach ($donnees as $key => $value)
+        {
+            $method = 'set'.ucfirst($key);
+            if (method_exists($this, $method))
+            {
+            $this->$method($value);
+            }
+        }
+    }
 
-public function __construct(array $donnees)
-{
-  $this->hydrate($donnees);
-}
-public function hydrate(array $donnees)
- {
-   foreach ($donnees as $key => $value)
-   {
-     $method = 'set'.ucfirst($key);
-     if (method_exists($this, $method))
-     {
-       $this->$method($value);
-     }
-   }
- }
-
+                    // setters and getters
 
     /**
      * Get the value of Id
@@ -47,8 +47,7 @@ public function hydrate(array $donnees)
     public function setId($id)
     {
         $this->id = $id;
-
-       return $this;
+        return $this;
     }
 
    /**
@@ -71,8 +70,7 @@ public function hydrate(array $donnees)
     public function setUsername($username)
     {
         $this->username = htmlspecialchars($username);
-
-       return $this;
+        return $this;
     }
 
    /**
@@ -95,27 +93,25 @@ public function hydrate(array $donnees)
     public function setCredit($credit)
     {
         $this->credit = htmlspecialchars($credit);
-
-       
-
-       return $this;
+        return $this;
     }
+                    // end of setters and getters
 
-   public function addCredit($amount){
 
+                    // add functions
+    public function addCredit($amount)
+    {
         $this->credit +=  $amount;
-         $this->setCredit($this->credit);//défini son crédit
+        $this->setCredit($this->credit);//defined his credit
     }
 
-   public function minousCredit($amount){
-
+    public function minousCredit($amount)
+    {
         $this->credit -=  $amount;
-         $this->setCredit($this->credit);
+        $this->setCredit($this->credit);
     }
+
 
 }
-
-
 ?>
-
-<!-- // $donnees -->
+<!-- end of php -->

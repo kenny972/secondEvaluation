@@ -5,15 +5,18 @@
 
 
 
-	$Manager = new AccountManager();
-	$giver = $Manager->GetVueAccount($_POST['from']);
-	$recever = $Manager->GetVueAccount($_POST['to']);
-	$transfer = ($_POST['additional']);
-	$giver->minousCredit($transfer);
-	$recever->addCredit($transfer);
-	var_dump($giver);
-	var_dump($recever);
+	$manager = new AccountManager(); //i declare a new object
+	$giver = $manager->GetVueAccount($_POST['from']);//new object $giver receives the informations contained in $Manager//recovery of what is in the form
+	$recever = $manager->GetVueAccount($_POST['to']);//new object $giver receives the informations contained in $Manager//recovery of what is in the form with the help of the method
+	$transfer = ($_POST['additional']);//recovery of what is in the form with the help of the method
+	$giver->minousCredit($transfer);//recovery of what is in the form with the help of variable $transfer
+	$recever->addCredit($transfer);//add a credit with in the variable $transfer
+	$manager->update($giver);
+	$manager->update($recever);
+	
 
 
-	header('location:home.php');//revient vers ma page
+	
+	header('location:home.php');//return to my home.php
 ?>
+

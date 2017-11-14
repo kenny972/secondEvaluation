@@ -7,7 +7,7 @@
 
 
 			// 1) Loading classes and tools needed
-	$Manager = new AccountManager();//creat a new object
+	$Manager = new AccountManager();//creat a new object with my homeView.php
 
 		if (isset($_POST['username']) AND isset($_POST['credit'])){ //create a condition to retrieve seizures in the "homeView" in the modal
 
@@ -28,7 +28,7 @@
 
 
 
-		// 2) View of my Application
+			// 2) View of my Application
 			
 	include "../views/homeView.php";
 			
@@ -38,5 +38,3 @@
 
 
 
-
-<!-- // $donnees -->
