@@ -171,7 +171,7 @@
               </div>
 
               <div class="modal-body">
-                <form class="text-center" action="../controleur/withdrawal.php" method="post">
+                <form class="text-center" action="../controllers/withdrawal.php" method="post">
                   <select class="mb-3" name="from">
                     <?php foreach ($vueaccount as $donnees)
                     {
